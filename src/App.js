@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {useEffect} from 'react'
 
@@ -34,17 +33,22 @@ function App() {
           <div>
             <img src={user?.profilePictureUrl} alt={user?.name} />
           </div>
+          <div className='header'>
+            <span className="heading">Welcome, {user?.name}!</span>
+            </div>
+            <div className="underHeader">
+              We're glad to have you back
+              </div>
           <div className="detail">
-            <span className="heading">Name: {user?.name}</span>
             <span className="heading">Email: {user?.email}</span>
           </div>
           <div>
             <button
             onClick={() => logout()}
-            className="button">Click to logout</button>
+            className="button">Logout</button>
             <button
             onClick={() => handleClick()}
-            className="button">View full Profile</button>
+            className="button">Settings</button>
           </div>
         </div>
       ): 

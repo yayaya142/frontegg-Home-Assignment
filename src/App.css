@@ -1,41 +1,110 @@
+/* App container styles */
 .App {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #f0f4fd,
+    #d1cfe2,
+    #e6f0fa
+  ); /* Soft pastel gradient */
+  font-family: "Poppins", sans-serif; /* Modern font */
+  color: #333;
 }
 
+/* Card styles */
 .card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  text-align: center;
+  width: 350px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid #000; */
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.button {
-  padding: 10px;
-  color: #000;
-  background-color: #fff;
-  text-transform: uppercase;
+.card:hover {
+  transform: scale(1.04); /* Slightly larger hover effect */
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Profile picture */
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #a3bffa; /* Soft blue border around profile picture */
+}
+
+/* Welcome message */
+.header .heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #6e8efb; /* Matches the theme color */
+  margin-bottom: 5px;
+}
+
+.underHeader {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* User details */
+.detail .heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail span {
+  display: block;
   font-size: 14px;
-  outline: none;
-  border-radius: 10px;
-  border: 1px solid #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 20px;
+  color: #555;
 }
 
-.heading {
-  font-size: 22px;
-  font-weight: 600;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* Button styles */
+.button {
+  padding: 12px 22px;
+  color: #fff;
+  background-color: #6e8efb;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0px 4px 15px rgba(110, 142, 251, 0.4); /* Subtle button shadow */
 }
 
-.detail {
-  display: block;
+.button:hover {
+  background-color: #a777e3;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(110, 142, 251, 0.6); /* Stronger shadow on hover */
+}
+
+/* Specific button layout */
+.button + .button {
+  margin-left: 10px;
+}
+
+/* Card responsiveness for smaller screens */
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .button {
+    width: 100%; /* Make buttons full-width on mobile */
+    margin: 8px 0;
+  }
 }

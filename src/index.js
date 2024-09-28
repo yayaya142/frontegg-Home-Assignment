@@ -7,18 +7,16 @@ import reportWebVitals from './reportWebVitals';
 import { FronteggProvider } from '@frontegg/react';
 
 const contextOptions = {
-  baseUrl: 'https://app-2wp8atnxfred.us.frontegg.com',
+  baseUrl: 'https://app-2wp8atnxfred.us.frontegg.com', // Connected to shai's account
   clientId: '34c405a4-33ef-4b37-b920-cc0053eeb22c'
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>>
+  <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>
     <App />
   </FronteggProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
