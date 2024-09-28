@@ -57,7 +57,7 @@ function App() {
         <button 
         onClick={() => loginWithRedirect()}
         className="button">
-        Click me to login
+        Login
         </button>
         </div>
       ) }
